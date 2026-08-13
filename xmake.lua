@@ -24,4 +24,4 @@ target("XRay")
         add_shflags("-Wl,--gc-sections", "-flto", "-Wl,--hash-style=gnu", "-Wl,-z,max-page-size=16384")
         add_links("android", "log")
     end
-end
+target_end()
