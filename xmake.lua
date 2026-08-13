@@ -3,10 +3,11 @@ set_policy("package.requires_lock", true)
 
 package("preloader")
     set_homepage("https://github.com/LiteLDev/preloader-android")
+    set_description("Preloader Android")
     add_urls("https://github.com/LiteLDev/preloader-android.git")
     add_versions("main", "main")
-    add_deps("cmake")
-    on_install("android", function (package)
+
+    on_install(function (package)
         import("package.tools.cmake").install(package)
     end)
 package_end()
